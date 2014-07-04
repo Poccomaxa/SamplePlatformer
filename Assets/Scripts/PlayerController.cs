@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour {
 	private Animator _animator;
 	private bool _jump;
 
+	public GameObject groundCheck;
+
 	// Use this for initialization
 	void Start () {
 		_animator = GetComponent<Animator>();	
@@ -17,7 +19,12 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.UpArrow)) {
+		bool grounded = false;
+		if (Physics2D.Linecast(transform.position, groundCheck.transform.position, 1 << LayerMask.NameToLayer("Ground"))) {
+			grounded = true;
+		}
+
+		if (Input.GetKeyDown(KeyCode.UpArrow) && grounded) {
 			_jump = true;
 		}	
 	}
@@ -46,5 +53,8 @@ public class PlayerController : MonoBehaviour {
 			_jump = false;
 		}
 
+		if (transform.position.y < -20) {
+			transform.position = new Vector2(0, 0);
+		}
 	}
 }
