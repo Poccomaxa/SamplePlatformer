@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour {
 		_animator.SetFloat("Speed", Mathf.Abs(h));
 
 		if (_jump) {
-			rigidbody2D.AddForce(Vector2.up * jumpForce);
+			rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpForce);
 
 			_animator.SetTrigger("Jump");
 
