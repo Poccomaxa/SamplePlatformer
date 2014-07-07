@@ -1,18 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\SVNRunningShadow\application\Assets\Scripts\UI\EnterPVP\EnterPVPWindow.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerController.cs">
     <Files>
-      <File FileName="..\SVNRunningShadow\application\Assets\Scripts\UI\EnterPVP\EnterPVPScrollElement.cs" Line="10" Column="24" />
-      <File FileName="..\SVNRunningShadow\application\Assets\Scripts\UI\EnterPVP\EnterPVPWindow.cs" Line="310" Column="43" />
-      <File FileName="..\SVNRunningShadow\application\Assets\Scripts\data\models\PvP\PvPStatCalc.cs" Line="16" Column="3" />
-      <File FileName="..\SVNRunningShadow\application\Assets\Scripts\data\models\PlayerAchievements.cs" Line="138" Column="6" />
-      <File FileName="..\SVNRunningShadow\application\Assets\Scripts\data\storages\UserStorages\UserAchievementStorage.cs" Line="16" Column="2" />
-      <File FileName="..\SVNRunningShadow\application\Assets\Scripts\Network\Integrations\FacebookIntegration.cs" Line="134" Column="4" />
-      <File FileName="..\SVNRunningShadow\application\Assets\Facebook\Scripts\FB.cs" Line="255" Column="10" />
+      <File FileName="Assets\Scripts\PlayerController.cs" Line="61" Column="38" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="D:\Work\SamplePlatformer\Assets\Scripts\PlayerController.cs" line="62" />
+      <Breakpoint file="D:\Work\SamplePlatformer\Assets\Scripts\PlayerController.cs" line="68" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

@@ -24,18 +24,13 @@ public class PlayerController : MonoBehaviour {
 			grounded = true;
 		}
 
-		if (Input.GetKeyDown(KeyCode.UpArrow) && grounded) {
+		if (Input.GetButtonDown("Jump") && grounded) {
 			_jump = true;
 		}	
 	}
 
 	void FixedUpdate() {
-		int h = 0;
-		if (Input.GetKey(KeyCode.LeftArrow)) {
-			h = -1;
-		} else if (Input.GetKey(KeyCode.RightArrow)) {
-			h = 1;
-		}
+		float h = Input.GetAxis("Horizontal");
 
 		rigidbody2D.AddForce(Vector2.right * h * acceleration);
 
@@ -57,4 +52,13 @@ public class PlayerController : MonoBehaviour {
 			transform.position = new Vector2(0, 0);
 		}
 	}
+
+	void OnTriggerEnter2D(Collider2D other) {
+		if (other.tag == "LevelEnd") {
+			GameManager.currentLevel.gameWinLabel.gameObject.SetActive(true);
+			_animator.SetFloat("Speed", 0.0f);
+			this.enabled = false;
+		}
+	}
+
 }
